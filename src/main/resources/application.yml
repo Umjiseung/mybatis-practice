@@ -7,3 +7,5 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.mybatis.practice.board.domain

@@ -1,6 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.mybatis.practice.board.repository.BoardRepository">
+    <resultMap id="BoardResultMap" type="com.example.model.Board">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="createdTime" column="created_time" />
+    </resultMap>
 
-<mapper namespace="com.example.repository.BoardRepository">
-    <insert id="insertBoard" resultType="Board">
+    <insert id="insertBoard">
         INSERT INTO board (title, content, createdTime) VALUES (#{title}, #{content}, #{createdTime})
     </insert>
 </mapper>
